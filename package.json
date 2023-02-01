@@ -1,0 +1,26 @@
+{
+  "name": "bullmq-group-rate-limit-test",
+  "packageManager": "yarn@3.4.0",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dbs": "docker compose up",
+    "prune:dbs": "ts-node src/drop-redis"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@taskforcesh/bullmq-pro": "^5.1.12",
+    "ioredis": "^5.3.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.7.0"
+  }
+}
