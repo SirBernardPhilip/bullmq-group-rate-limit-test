@@ -1,10 +1,8 @@
-import 'reflect-metadata';
-import { container } from 'tsyringe';
 import { QueueBroker } from './queue-broker';
 
 void (async (): Promise<void> => {
 	try {
-		const queueBroker = container.resolve(QueueBroker);
+		const queueBroker = QueueBroker.getInstance();
 		console.log('QueueBroker created, adding 3 subtasks for user1');
 		queueBroker.addSubtasks('IMPORT_EVERNOTE', [
 			{
